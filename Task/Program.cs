@@ -14,6 +14,7 @@ PrintArray(symbolArray);
 System.Console.WriteLine("Изменённый массив:");
 PrintArray(ModifiedArray(symbolArray));
 
+
 int GetLength()
 {
     int number;
@@ -50,11 +51,10 @@ void PrintArray(string[] аrray)
 string[] ModifiedArray(string[] array)
 {
     string [] changeArray = new string[array.Length];
-    int maxLength = 3;
     int count = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if (i < maxLength)
+        if(array[i].Length <= 3)
         {
             changeArray[count] = array[i];
             count++;
